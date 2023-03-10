@@ -13,6 +13,7 @@ def get_main_tracking_page(session):
         raise Exception(f'Unable to get page: {TRACKING_URL}, {resp.status_code=}')
 
     soup = BeautifulSoup(resp.text, 'html.parser')
+    return soup
 
 
 def get_data_from_post(resp_text):
